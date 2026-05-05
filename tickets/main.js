@@ -66,48 +66,14 @@ document.querySelector("form").addEventListener("submit", function(e){
 
 });
 
-const ticketsStyle = document.getElementById("cssTickets");
+
 let local = JSON.parse(window.localStorage.getItem("themes"));
-
-function mainThemes(navcolor, navbordcolor, navtextcolor, nashadow){
-  document.documentElement.style.setProperty('--navBackgroundColor', navcolor);
-  document.documentElement.style.setProperty('--navBorderColor', navbordcolor);
-  document.documentElement.style.setProperty('--navTextColor',navtextcolor);
-  document.documentElement.style.setProperty('--navShadowColor',nashadow);
-}
-function ticketsThemes (
-  mainBg,bg,cardSectionBg,cardBg,cardVipBg,primary,accent,textMain,textMuted,textOnPrimary,textBtn,textPrice,
-  textConfirm,titleColor,titleBorder,stepDefaultBg,stepDefaultBorder,cardBorder,cardGoldFrom,inputBorder,
-  timeItemBg,timeLabelBg,timeLabelHoverBg,optionHoverBg,shadowSection,shadowCardHover
-) {
-  document.documentElement.style.setProperty('--mainBg',mainBg);
-  document.documentElement.style.setProperty('--bg',bg);
-  document.documentElement.style.setProperty('--card-section-bg',cardSectionBg);
-  document.documentElement.style.setProperty('--card-bg',cardBg);
-  document.documentElement.style.setProperty('--card-vip-bg',cardVipBg);
-  document.documentElement.style.setProperty('--primary',primary);
-  document.documentElement.style.setProperty('--accent',accent);
-  document.documentElement.style.setProperty('--text-main',textMain);
-  document.documentElement.style.setProperty('--text-muted',textMuted);
-  document.documentElement.style.setProperty('--text-on-primary',textOnPrimary);
-  document.documentElement.style.setProperty('--text-btn',textBtn);
-  document.documentElement.style.setProperty('--text-price',textPrice);
-  document.documentElement.style.setProperty('--text-confirm',textConfirm);
-  document.documentElement.style.setProperty('--title-color',titleColor);
-  document.documentElement.style.setProperty('--title-border',titleBorder);
-  document.documentElement.style.setProperty('--step-default-bg',stepDefaultBg);
-  document.documentElement.style.setProperty('--step-default-border',stepDefaultBorder);
-  document.documentElement.style.setProperty('--card-border',cardBorder);
-  document.documentElement.style.setProperty('--card-gold-from',cardGoldFrom);
-  document.documentElement.style.setProperty('--input-border',inputBorder);
-  document.documentElement.style.setProperty('--time-item-bg',timeItemBg);
-  document.documentElement.style.setProperty('--time-label-bg',timeLabelBg);
-  document.documentElement.style.setProperty('--time-label-hover-bg',timeLabelHoverBg);
-  document.documentElement.style.setProperty('--option-hover-bg',optionHoverBg);
-  document.documentElement.style.setProperty('--shadow-section',shadowSection);
-  document.documentElement.style.setProperty('--shadow-card-hover',shadowCardHover);
-}
-
+const homeStyle = document.getElementById("css");
+const ticketsStyle = document.getElementById("cssTickets");
+const civilizationsStyle = document.getElementById("cssCivilizations");
+const placesStyle = document.getElementById("cssPlaces");
+const loginStyle = document.getElementById("cssLogin");
+// !applay all propertys
 function generate () {
   console.log(local)
   // ! main
@@ -117,6 +83,16 @@ function generate () {
     local.main.navTextColor,
     local.main.navShadowColor
   )
+  document.getElementById("homeicone").setAttribute("src", local.main.homeIcone);
+  // ! me
+  homeThemes(
+    local.home.welcomeColor,
+    local.home.welcomeTo,
+    local.home.welcomeShadow,
+    local.home.heloColor,
+    local.home.backgroundFirstS,
+    local.home.backgroundthirdS
+  );
   ticketsThemes (
     local.tickets.mainBg,
     local.tickets.bg,
@@ -145,9 +121,42 @@ function generate () {
     local.tickets.shadowSection,
     local.tickets.shadowCardHover,
   )
+  places (
+    local.places.color_Header_H2_Bordercard_h3,
+    local.places.color_Button,
+    local.places.color_Buttonhover,
+    local.places.color_Paragraph_write,
+    local.places.color_Background_Sec_big,
+    local.places.color_Background_Sec_smoll,
+    local.places.color_Boxshadow,
+    local.places.photo_background
+  )
+  if (homeStyle !== null)
+  {
+    homeStyle.setAttribute("href", local.home.style)
+  }
   if (ticketsStyle !== null)
   {
     ticketsStyle.setAttribute("href", local.tickets.style)
   }
+  if (civilizationsStyle !== null)
+  {
+    civilizationsStyle.setAttribute("href", local.civilizations.style)
+  }
+  if (placesStyle !== null)
+  {
+    placesStyle.setAttribute("href", local.places.style)
+  }
+  if (loginStyle !== null)
+  {
+    loginStyle.setAttribute("href", local.login.style)
+  }
+
+  for (let i = 0; i < cards.length; i++)
+  {
+    cards[i].classList.remove("fix");
+  }
+  // !
+  window.localStorage.setItem("themes" , JSON.stringify(local));
 }
 generate ();

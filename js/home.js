@@ -84,18 +84,6 @@ function ticketsThemes (
   document.documentElement.style.setProperty('--shadow-section',shadowSection);
   document.documentElement.style.setProperty('--shadow-card-hover',shadowCardHover);
 }
-function contactUsThemes(bodyColor,secColor,bordColor,bordIconColor,arrowBackColor,arrColor,formColor,sumbBackColor,sumbitTexColor,sumbitHover) {
-  document.documentElement.style.setProperty('BodyColor',bodyColor);
-  document.documentElement.style.setProperty('sectionColor',secColor);
-  document.documentElement.style.setProperty('borderColor',bordColor);
-  document.documentElement.style.setProperty('borderIcon',bordIconColor);
-  document.documentElement.style.setProperty('arrowButtonBackground',arrowBackColor);
-  document.documentElement.style.setProperty('arrowColor',arrColor);
-  document.documentElement.style.setProperty('formColor',formColor);
-  document.documentElement.style.setProperty('sumbitBackground',sumbBackColor);
-  document.documentElement.style.setProperty('sumbitTextcolor',sumbitTexColor);
-  document.documentElement.style.setProperty('sumbitBackgroundHover',sumbitHover);
-}
 function mainThemes(navcolor, navbordcolor, navtextcolor, nashadow){
   document.documentElement.style.setProperty('--navBackgroundColor', navcolor);
   document.documentElement.style.setProperty('--navBorderColor', navbordcolor);
@@ -158,28 +146,16 @@ let themes = {
     shadowCardHover: "",
     style: "",
   },
-  contactUs:{
-    BodyColor: "",
-    sectionColor: "",
-    borderColor: "",
-    borderIcon: "",
-    arrowButtonBackground: "",
-    arrowColor: "",
-    formColor: "",
-    sumbitBackground: "",
-    sumbitTextcolor: "",
-    sumbitBackgroundHover: "",
-  },
   login:{
     style: "",
   },
   main:{
-  navBackgroundColor: "",
-  navBorderColor: "",
-  navTextColor: "",
-  navShadowColor: "",
-  homeIcone: "",
-  homeIconePages: "",
+    navBackgroundColor: "",
+    navBorderColor: "",
+    navTextColor: "",
+    navShadowColor: "",
+    homeIcone: "",
+    homeIconePages: "",
   }
 }
 // window.localStorage.setItem("themes" , JSON.stringify(themes));
@@ -189,7 +165,7 @@ let local = JSON.parse(window.localStorage.getItem("themes"));
 function theme1() {
   // ! me
   local.home.welcomeColor = "rgba(219, 180, 50, 0.864)";
-  local.home.welcomeTo = "white";
+  local.home.welcomeTo = "#c6c6c6";
   local.home.welcomeShadow = "rgb(161, 132, 37)";
   local.home.heloColor = "#b689001c";
   local.home.backgroundFirstS = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) , url(../img/home1.png)";
@@ -221,19 +197,16 @@ function theme1() {
   local.tickets.optionHoverBg = "#c7a25e";    
   local.tickets.shadowSection = "rgba(0, 0, 0, 0.08)";  
   local.tickets.shadowCardHover = "rgba(0, 0, 0, 0.1)";
-  // ! contactUs
-  local.contactUs.BodyColor= "";
-  local.contactUs.sectionColor= "";
-  local.contactUs.borderColor= "";
-  local.contactUs.borderIcon= "";
-  local.contactUs.arrowButtonBackground= "";
-  local.contactUs.arrowColor= "";
-  local.contactUs.formColor= "";
-  local.contactUs.sumbitBackground= "";
-  local.contactUs.sumbitTextcolor= "";
-  local.contactUs.sumbitBackgroundHover= "";
-  // ! 
-
+  // ! places
+  local.places.color_Header_H2_Bordercard_h3 = "#F5C542";
+  local.places.color_Button = "#D4AF37";
+  local.places.color_Buttonhover = "#B8860B";
+  local.places.color_Paragraph_write = "#E0E0E0";
+  local.places.color_Background_Sec_big = "rgba(255, 255, 255, 0.02)";
+  local.places.color_Background_Sec_smoll = "rgba(255, 255, 255, 0.07)";
+  local.places.color_Boxshadow = "rgba(245,197,66,0.4)";
+  local.places.photo_background = "url(background.png)";
+  
 };
 function theme2(){
   // ! me
@@ -270,18 +243,15 @@ function theme2(){
   local.tickets.optionHoverBg = "#c7a25e";    
   local.tickets.shadowSection = "rgba(0, 0, 0, 0.08)";   
   local.tickets.shadowCardHover = "rgba(0, 0, 0, 0.1)";
-  // ! contactUs
-  local.contactUs.BodyColor= "#c3b89a";
-  local.contactUs.sectionColor= "#dbd3bb";
-  local.contactUs.borderColor= "#111111";
-  local.contactUs.borderIcon= "#111111";
-  local.contactUs.arrowButtonBackground= "#111111";
-  local.contactUs.arrowColor= "white";
-  local.contactUs.formColor= "#dbd3bb";
-  local.contactUs.sumbitBackground= "#222";
-  local.contactUs.sumbitTextcolor= "#fff";
-  local.contactUs.sumbitBackgroundHover= "#333";
-  // !
+  // ! places
+  local.places.color_Header_H2_Bordercard_h3 = "#efd4d4";
+  local.places.color_Button = "#72590592";
+  local.places.color_Buttonhover = "#0bb87c";
+  local.places.color_Paragraph_write = "#e8a30e";
+  local.places.color_Background_Sec_big = "rgba(255, 255, 255, 0.02)";
+  local.places.color_Background_Sec_smoll = "rgba(80, 178, 10, 0.07)";
+  local.places.color_Boxshadow = "rgba(245,197,66,0.4)";
+  local.places.photo_background = "url(themes_back/back2.png)";
 
 };
 function theme3(){
@@ -290,7 +260,7 @@ function theme3(){
   local.home.welcomeTo = "black";
   local.home.welcomeShadow = "yellow";
   local.home.heloColor = "#b689001c";
-  local.home.backgroundFirstS = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) , url(../img/testTheme/home.png)";
+  local.home.backgroundFirstS = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) , url(../img/night-nile.jpg)";
   local.home.backgroundthirdS = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) , url(../img/testTheme/sectionInEnd.png)";
   // ! tickets
   local.tickets.mainBg = "linear-gradient(rgba(10,15,28,0.4), rgba(10,15,28,0.4)) ,url(\"dark-test.jpg\")";
@@ -319,18 +289,15 @@ function theme3(){
   local.tickets.optionHoverBg = "#334155";
   local.tickets.shadowSection = "rgba(0,0,0,0.4)";
   local.tickets.shadowCardHover = "rgba(0.0.0.0.6)";
-  // ! contactUs
-  local.contactUs.BodyColor= "";
-  local.contactUs.sectionColor= "";
-  local.contactUs.borderColor= "";
-  local.contactUs.borderIcon= "";
-  local.contactUs.arrowButtonBackground= "";
-  local.contactUs.arrowColor= "";
-  local.contactUs.formColor= "";
-  local.contactUs.sumbitBackground= "";
-  local.contactUs.sumbitTextcolor= "";
-  local.contactUs.sumbitBackgroundHover= "";
-  // !
+  // ! places
+  local.places.color_Header_H2_Bordercard_h3 = "#b4b61e";
+  local.places.color_Button = "#a9d21492";
+  local.places.color_Buttonhover = "#bd631a";
+  local.places.color_Paragraph_write = "#0da282";
+  local.places.color_Background_Sec_big = "rgba(255, 255, 255, 0.02)";
+  local.places.color_Background_Sec_smoll = "rgba(0, 156, 83, 0.07)";
+  local.places.color_Boxshadow = "rgba(66, 245, 182, 0.4)";
+  local.places.photo_background = "url(themes_back/back3.png)";
 
 };
 function theme4() {
@@ -368,19 +335,15 @@ function theme4() {
   local.tickets.optionHoverBg = "#c7a25e";    
   local.tickets.shadowSection = "rgba(0, 0, 0, 0.08)";  
   local.tickets.shadowCardHover = "rgba(0, 0, 0, 0.1)";
-  // ! contactUs
-  local.contactUs.BodyColor= "#c3b89a";
-  local.contactUs.sectionColor= "#dbd3bb";
-  local.contactUs.borderColor= "#111111";
-  local.contactUs.borderIcon= "#111111";
-  local.contactUs.arrowButtonBackground= "#111111";
-  local.contactUs.arrowColor= "white";
-  local.contactUs.formColor= "#dbd3bb";
-  local.contactUs.sumbitBackground= "#222";
-  local.contactUs.sumbitTextcolor= "#fff";
-  local.contactUs.sumbitBackgroundHover= "#333";
-  // !
-
+  // ! places
+  local.places.color_Header_H2_Bordercard_h3 = "#F5C542";
+  local.places.color_Button = "#D4AF37";
+  local.places.color_Buttonhover = "#B8860B";
+  local.places.color_Paragraph_write = "#E0E0E0";
+  local.places.color_Background_Sec_big = "rgba(255, 255, 255, 0.02)";
+  local.places.color_Background_Sec_smoll = "rgba(255, 255, 255, 0.07)";
+  local.places.color_Boxshadow = "rgba(245,197,66,0.4)";
+  local.places.photo_background = "url(background.png)";
 };
 function theme5(){
   // ! me
@@ -417,18 +380,15 @@ function theme5(){
   local.tickets.optionHoverBg = "#334155";
   local.tickets.shadowSection = "rgba(0,0,0,0.4)";
   local.tickets.shadowCardHover = "rgba(0.0.0.0.6)";
-  // ! contactUs
-  local.contactUs.BodyColor= "";
-  local.contactUs.sectionColor= "";
-  local.contactUs.borderColor= "";
-  local.contactUs.borderIcon= "";
-  local.contactUs.arrowButtonBackground= "";
-  local.contactUs.arrowColor= "";
-  local.contactUs.formColor= "";
-  local.contactUs.sumbitBackground= "";
-  local.contactUs.sumbitTextcolor= "";
-  local.contactUs.sumbitBackgroundHover= "";
-  // !
+  // ! places
+  local.places.color_Header_H2_Bordercard_h3 = "#efd4d4";
+  local.places.color_Button = "#72590592";
+  local.places.color_Buttonhover = "#0bb87c";
+  local.places.color_Paragraph_write = "#e8a30e";
+  local.places.color_Background_Sec_big = "rgba(255, 255, 255, 0.02)";
+  local.places.color_Background_Sec_smoll = "rgba(80, 178, 10, 0.07)";
+  local.places.color_Boxshadow = "rgba(245,197,66,0.4)";
+  local.places.photo_background = "url(themes_back/back2.png)";
 
 };
 function theme6(){
@@ -466,18 +426,15 @@ function theme6(){
   local.tickets.optionHoverBg = "#c7a25e";    
   local.tickets.shadowSection = "rgba(0, 0, 0, 0.08)";  
   local.tickets.shadowCardHover = "rgba(0, 0, 0, 0.1)";
-  // ! contactUs
-  local.contactUs.BodyColor= "#c3b89a";
-  local.contactUs.sectionColor= "#dbd3bb";
-  local.contactUs.borderColor= "#111111";
-  local.contactUs.borderIcon= "#111111";
-  local.contactUs.arrowButtonBackground= "#111111";
-  local.contactUs.arrowColor= "white";
-  local.contactUs.formColor= "#dbd3bb";
-  local.contactUs.sumbitBackground= "#222";
-  local.contactUs.sumbitTextcolor= "#fff";
-  local.contactUs.sumbitBackgroundHover= "#333";
-  // !
+  // ! places
+  local.places.color_Header_H2_Bordercard_h3 = "#b4b61e";
+  local.places.color_Button = "#a9d21492";
+  local.places.color_Buttonhover = "#bd631a";
+  local.places.color_Paragraph_write = "#0da282";
+  local.places.color_Background_Sec_big = "rgba(255, 255, 255, 0.02)";
+  local.places.color_Background_Sec_smoll = "rgba(0, 156, 83, 0.07)";
+  local.places.color_Boxshadow = "rgba(66, 245, 182, 0.4)";
+  local.places.photo_background = "url(themes_back/back3.png)";
 
 };
 function mainTheme1(){
@@ -569,18 +526,16 @@ function generate () {
     local.tickets.shadowSection,
     local.tickets.shadowCardHover,
   )
-  // contactUsThemes(
-  //   local.contactUs.BodyColor,
-  //   local.contactUs.sectionColor,
-  //   local.contactUs.borderColor,
-  //   local.contactUs.borderIcon,
-  //   local.contactUs.arrowButtonBackground,
-  //   local.contactUs.arrowColor,
-  //   local.contactUs.formColor,
-  //   local.contactUs.sumbitBackground,
-  //   local.contactUs.sumbitTextcolor,
-  //   local.contactUs.sumbitBackgroundHover
-  // ) 
+  places (
+    local.places.color_Header_H2_Bordercard_h3,
+    local.places.color_Button,
+    local.places.color_Buttonhover,
+    local.places.color_Paragraph_write,
+    local.places.color_Background_Sec_big,
+    local.places.color_Background_Sec_smoll,
+    local.places.color_Boxshadow,
+    local.places.photo_background
+  )
   if (homeStyle !== null)
   {
     homeStyle.setAttribute("href", local.home.style)
@@ -588,6 +543,18 @@ function generate () {
   if (ticketsStyle !== null)
   {
     ticketsStyle.setAttribute("href", local.tickets.style)
+  }
+  if (civilizationsStyle !== null)
+  {
+    civilizationsStyle.setAttribute("href", local.civilizations.style)
+  }
+  if (placesStyle !== null)
+  {
+    placesStyle.setAttribute("href", local.places.style)
+  }
+  if (loginStyle !== null)
+  {
+    loginStyle.setAttribute("href", local.login.style)
   }
 
   for (let i = 0; i < cards.length; i++)
