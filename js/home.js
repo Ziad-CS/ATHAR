@@ -267,7 +267,7 @@ function theme3(){
   local.home.heloColor = "#b689001c";
   local.home.backgroundFirstS = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) , url(../img/night-nile.jpg)";
   local.home.backgroundthirdS = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) , url(../img/testTheme/sectionInEnd.png)";
-  local.home.fer3on = "#b6890025";
+  local.home.fer3on = "transparent";
   // ! tickets
   local.tickets.mainBg = "linear-gradient(rgba(10,15,28,0.4), rgba(10,15,28,0.4)) ,url(\"dark-test.jpg\")";
   local.tickets.bg = "#020617";
@@ -576,7 +576,9 @@ function generate () {
   // !
   window.localStorage.setItem("themes" , JSON.stringify(local));
 }
-generate ();
+if (window.localStorage.getItem("themes") === null ) {
+  generate ();
+}
 
 cards[0].addEventListener("click", style1);
 cards[0].addEventListener("click", theme1);
