@@ -1,0 +1,357 @@
+:root {
+    --overlay: rgba(0,0,0,0.6);
+    --text: #fff;
+    --accent: #c9a66b;
+}
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* INTRO */
+.intro {
+    min-height: 100vh;
+    background: url("../imgs/Modern_Egypt/ATHAR-Desktop.png") center/cover;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+
+/* ===== Gallary ===== */
+.slider {
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+
+.track {
+    display: flex;
+    height: 100%;
+}
+
+.item {
+    min-width: 33.33%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.slider {
+    scroll-snap-type: x mandatory;
+}
+
+.item {
+    scroll-snap-align: start;
+}
+
+
+/* ===== SECTION ===== */
+.section {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    box-shadow: 0 -20px 40px rgba(0,0,0,0.6);
+}
+
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: clamp(300px, 70vw, 800px);
+    height: auto;
+    padding: 2rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-image:linear-gradient(to bottom, rgba(59, 58, 58, 0.3) 5%, rgb(255, 255, 255, 0.3) 60% ,  rgba(59, 58, 58, 0.3) 90%)  ;
+
+}
+
+
+/* text styling */
+.sidebar h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: var(--accent);
+    margin-bottom: 15px;;
+
+}
+.sidebar h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: var(--accent);
+    margin-top: 5px;
+    margin-bottom: 15px;
+
+}
+
+.sidebar p {
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    max-width: 90%;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #d3d3d3;
+
+}
+
+
+
+
+/* Backgrounds */
+.pharaoh1 { background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.3) , rgba(0, 0, 0, 0.7) ) , url("../imgs/Ancient_Egyptian_Civilization/pyramids.jpg"); }
+.pharaoh2 { background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.3) , rgba(0, 0, 0, 0.7) ) , url("../imgs/Ancient_Egyptian_Civilization/pahro2.jpg"); }
+.pharaoh3 { background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.3) , rgba(0, 0, 0, 0.7) ) , url("../imgs/Ancient_Egyptian_Civilization/karnak-temple.jpg"); }
+
+.roman1 { background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.3) , rgba(0, 0, 0, 0.7) ) , url("../imgs/Greco_Roman/dmitrii-zhodzishskii-4rXHE9XeW_A-unsplash.jpg"); }
+.roman2 { background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.3) , rgba(0, 0, 0, 0.7) ) , url("../imgs/Greco_Roman/gettyimages-1836054422-612x612.jpg"); }
+.roman3 { background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.3) , rgba(0, 0, 0, 0.7) ) , url("../imgs/Greco_Roman/1b230856-b910-47db-b7ed-5c39e895e8b5\ \(1\).jpg"); }
+
+.islamic1 { background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.3) , rgba(0, 0, 0, 0.7) ) , url("../imgs/Islamic_Civilization/pexels-ozgomz-1755383.jpg"); }
+.islamic2 { background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.3) , rgba(0, 0, 0, 0.7) ) , url("../imgs/Islamic_Civilization/yousef-salhamoud-1INRvy-Qg5s-unsplash.jpg"); }
+.islamic3 { background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.3) , rgba(0, 0, 0, 0.7) ) , url("../imgs/Islamic_Civilization/suzi-kim-_t4-A4WMVnE-unsplash.jpg"); }
+
+.modern1 { background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.3) , rgba(0, 0, 0, 0.7) ) , url("../imgs/Modern_Egypt/20221104-dsc_4371-hdr-edit.jpeg"); }
+.modern2 { background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.3) , rgba(0, 0, 0, 0.7) ) , url("../imgs/Modern_Egypt/gettyimages-558030205-612x612\ \(1\).jpg"); }
+.modern3{ background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.3) , rgba(0, 0, 0, 0.7) ) , url("../imgs/Modern_Egypt//gettyimages-2221864004-612x612\ \(1\).jpg"); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+    /*! nav */
+    --navBackgroundColor: rgba(211, 211, 211, 0.32);
+    --navBorderColor: rgba(255, 255, 255, 0.153);
+    --navTextColor: black;
+    --navShadowColor: rgba(0, 0, 0, 0.3);
+    --buttonColor: white;
+}
+/* !nav */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Cinzel", serif !important;
+}
+
+/*! navbar */
+
+.img-home, nav ul, .single, .mid-menu, .menu {
+    background-color: var(--navBackgroundColor);
+    border: 1px solid var(--navBorderColor);
+
+    border-radius: 15px;
+    color: var(--navTextColor);
+    font-size: clamp(12px, 2.5vw, 1.4rem) !important;
+    font-weight: 300 !important;
+    font-size: 1.5em !important;
+    line-height: 1.6 !important;
+    text-transform: capitalize !important;
+    padding: 0 0.5vw;
+
+    box-shadow: inset 0 0 15px var(--navShadowColor), 0 0 18px 3px var(--navShadowColor);
+}
+nav{
+    color: var(--navTextColor);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    z-index: 9999;
+    margin-top: 10px;
+}
+nav ul::after,
+.menu::after {
+    background-color: rgba(255, 255, 255, 0.804);
+    padding: 2px;
+    bottom: 49.65%;
+    content: '';
+    filter: blur(8px);
+    left: .865%;
+    position: absolute;
+    right: .865%;
+    top: 49.65%;
+    z-index: 1;
+}
+nav ul {
+    box-sizing: content-box;
+    padding: 10px 2vw;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    position: relative;
+    overflow: hidden;
+    gap: 15px;
+}
+.nav-item {
+    list-style: none;
+    scale: 1 1;
+    transition: .5s;
+    position: relative;
+}
+.nav-item a {
+    text-decoration: none;
+    color: var(--navTextColor);
+}
+.img-30 {
+    width: 30px;
+    height: 30px;
+}
+.mid-button {
+    align-self: start;
+}
+.nav-item:hover {
+    scale: 1.2 1.2;
+}
+@media (max-width:999px) {
+    .pc {
+        display: none !important;
+    }
+    nav {
+        scale: 1.5 1.4;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+    nav ul {
+        overflow: visible;
+        padding: 5px;
+    }
+    .mid-menu {
+        display: inline-flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        height: 50px;
+        width: 50px;
+        padding: 5px;
+        margin-top: -5px;
+        border-radius: 50%;
+        border: 2vw solid var(--buttonColor);
+    }
+    .menu {
+        position: fixed;
+        top: -310%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin: 0;
+        width: clamp(100px, 80vw,200px);
+        height: 150px;
+        max-height: fit-content;
+        min-height: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        overflow: hidden;
+    }
+    .menu::after {
+        transform: rotate(342deg) skewX(20deg);
+    }
+    nav ul::after {
+        transform: rotate(-5deg) skewX(20deg);
+    }
+    .menu a {
+        display: inline-block;
+        font-size: 16px;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    .mobile {display: none;}
+        /* ! glass effect background */
+
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    nav ul::after {
+        transform: rotate(-5deg) skewX(20deg);
+    }
+    .nav-item::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 2px;
+        background-color: rgb(220, 187, 0);
+        width: 0;
+        transition: .5s;
+    }
+    .img-70 {
+        width: 70px;
+        height: 70px;
+    }
+    .img-home {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        padding: 0.8vw;
+        transition: 1s;
+    }
+    .img-logo {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        padding: 0.8vw;
+        transition: 1s;
+    }
+    .single {
+        display: flex;
+        align-items: center;
+        transition: 1s;
+        text-decoration: none;
+    }
+    .nav-item:hover::before{
+        width: 40%;
+    }
+    .single:hover,
+    .img-home:hover {
+        scale: 1.2 1.2;
+
+    }
+
+    /*! footer */
+
+
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" id="cssLogin">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <title>Athar</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-section">
+            <img src="logo.jpg" alt="Logo" class="logo">
+            <h1>Athar</h1>
+        </div>
+        <div class="logout">
+            <a href="../index.html" class="out"> <img src="logout.jpg"> </a>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="image-side">
+            <div class="image-container">
+                <img src="login Image.jpg" alt="Side image">
+            </div>
+            <div class="left-content">
+                <h2>Welcome back!</h2>
+                <p>Sign in to continue to your account and explore more.</p>
+            </div>
+        </div>
+        <section class="form-side">
+            <form id="login-form">
+                <h3 class="title">Login</h3>
+                <p class="loginMessage">Welcome back!Please enter your details.</p>
+                <br>
+                <div class="input-field">
+                        <label class="inputLabels" for="login-email">Email adress</label>
+                        <i class="fa fa-envelope"></i>
+                        <input type="email" placeholder="Enter your email" name="email" required id="login-email">
+                </div>
+                <div class="input-field">
+                        <label class="inputLabels" for="login-password">Password</label>
+                        <i class="fa fa-lock"></i>
+                        <input type="password" placeholder="Enter your password" name="password" required id="login-password">
+                </div>
+                <button type="submit" class="btn" onclick="window.location.href= '../index.html'"> Login </button>
+                <p>Don't have account?<a href="signUp.html">Sign up</a></p>
+            </form>
+        </section>
+    </section>
+    <script src="login.js"></script>
+</body>
+</html>

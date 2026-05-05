@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <title>Athar</title>
+</head>
+<body>
+    <nav class="pc">
+        <div class="img-logo"> <img src="../img/small-athar.png" alt="logo" class="img-70"> </div>
+        <div class="img-home"> <a href="../index.html"> <img src="../img/homeicone1.png" alt="home" class="img-30" id="homeicone"> </a> </div>
+
+        <ul>
+            <li class="nav-item"> <a href="../introduction/index.html"> Introduction </a> </li>
+            <li class="nav-item"> <a href="../civilizations/Civilizations.html"> Civilizations </a> </li>
+            <li class="nav-item"> <a href="../gallery/gallery.html"> Gallery </a> </li>
+            <li class="nav-item"> <a href="../places/page.html"> Places </a> </li>
+            <li class="nav-item"> <a href="../tickets/tickets.html"> Tickets </a> </li>
+            <li class="nav-item"> <a href="../contactUs/contactUs.html"> Contact Us </a> </li>
+        </ul>
+        <a href="../login/login.html" class="single" > register </a>
+    </nav>
+
+    <nav class="mobile">
+        <ul>
+            <!--! home . menu . login -->
+            <li class="nav-item"> <a href="../index.html"> <img src="../img/homeicone1.png" alt="home" class="img-30"> </a> </li>
+            <li class="nav-item"> <a href="../introduction/index.html"> <img src="../img/intro.png" alt="home" class="img-30"> </a> </li>
+            <li class="nav-item"> 
+                <button class="mid-menu" popovertarget="my-menu"> <img src="../img/popup-menu.png" alt="menu" class="img-30 mid-button"> </button> 
+                <div id="my-menu" popover class="menu">
+                    <a href="../civilizations/Civilizations.html"> Civilizations </a>
+                    <a href="../gallery/gallery.html"> Gallery </a>
+                    <a href="../places/page.html"> Places </a>
+                    <a href="../tickets/tickets.html"> Tickets </a>
+                </div>
+            </li>
+            <li class="nav-item"> <a href="../contactUs/contactUs.html"> <img src="../img/contact.png" alt="home" class="img-30"> </a> </li>
+            <li class="nav-item"> <a href="../login/login.html"> <img src="../img/login.png" alt="login" class="img-30"> </a> </li>
+        </ul>
+    </nav>
+
+    <section class="hero section">
+        <div class="content">
+            <img src="logo.jpg" alt="Logo" class="logo-image">
+            <h1>ATHAR</h1>
+            <h2>WELCOME</h2>
+            <h3>TO OUR WEBSITE</h3>
+            <p>Discover the wonders of ancient Egyptian civilization</p>
+            <div class="scroll-down">↓ SCROLL DOWN</div>
+        </div>
+    </section>
+
+    <section class="intro section">
+        <div class="container">
+            <div class="text-side">
+                <h6>INTRODUCTION</h6>
+                <h2>WELCOME TO OUR WEBSITE</h2>
+                <h4 class="gold-text">Discover the Legacy of Ancient Egypt</h4>
+                <p>Egyptian civilization is one of the oldest and most fascinating in human history...</p>
+                <button class="btn" onclick="window.location.href = '../civilizations/Civilizations.html'">EXPLORE MORE</button>
+            </div>
+            <div class="image-side">
+                <img src="second.jpg" alt="Sphinx"> 
+                </div>
+        </div>
+    </section>
+
+    <section class="civilization section dark-bg">
+        <div class="container">
+            <div class="image-side">
+                <img src="fifth.jpg" alt="Pharaoh">
+            </div>
+            <div class="text-side">
+                <h6>OUR CIVILIZATION</h6>
+                <h2>A GREAT CIVILIZATION THAT SHAPED HISTORY</h2>
+                <div class="icons-grid">
+                    <div class="icon-item"><span>🏺</span><p>PHARAOHS</p></div>
+                    <div class="icon-item"><span>🏛️</span><p>ARCHITECTURE</p></div>
+                    <div class="icon-item"><span>👁️</span><p>WRITING</p></div>
+                    <div class="icon-item"><span>☥</span><p>RELIGION</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

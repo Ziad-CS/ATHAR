@@ -1,0 +1,133 @@
+/* الألوان الأساسية */
+:root {
+    --gold: #c5a059;
+    --dark-blue: #0a131e;
+    --light-tan: #e3d5b8;
+    --firstPage-text: #fff;
+    --hero-rgba: rgba(0, 0, 0, 0.6);
+    --header-rgba:var(--dark-blue);
+    --h6-color:#888;
+    --navBackgroundColor: rgba(211, 211, 211, 0.32);
+    --navBorderColor: rgba(255, 255, 255, 0.153);
+    --navTextColor: black;
+    --navShadowColor: rgba(0, 0, 0, 0.3);
+    --buttonColor: white;
+}
+/* nav */
+nav {
+  flex-direction: row-reverse;
+}
+nav ul {
+  flex-direction: row-reverse;
+}
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Cinzel", serif;
+}
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+}
+
+.hero {
+    background: linear-gradient(var(--hero-rgba), var(--hero-rgba)), url("first.jpg"); /* صورة الأهرامات */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 80px;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+.intro {
+    background-color: var(--light-tan);
+    color: var(--dark-blue);
+}
+
+.container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.text-side {
+    flex: 1;
+}
+
+.image-side {
+    flex: 1;
+    text-align: center;
+}
+
+.image-side img {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 20px 20px 0px var(--gold);
+}
+
+h6 {
+    color: var(--h6-color);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.gold-text {
+    color: var(--gold);
+}
+
+.btn {
+    background-color: var(--dark-blue);
+    color: var(--firstPage-text);
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Cinzel';
+}
+
+.icons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.icon-item span {
+    font-size: 30px;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.icon-item p {
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    header nav {
+        display: none;
+    }
+}

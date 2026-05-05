@@ -1,0 +1,314 @@
+:root{
+    --BodyColor:#c3b89a;
+    --sectionColor:#dbd3bb;
+    --borderColor:black;
+    --borderIcon:black;
+    --arrowButtonBackground:black;     
+    --arrowColor:white;
+    --formColor:#dbd3bb;
+    --sumbitBackground:#222;
+    --sumbitTextcolor:#fff;
+    --sumbitBackgroundHover:#333;
+}
+
+
+body{
+    background-color:var(--BodyColor) ;
+    height: 100vh;
+}
+ 
+ /* الايكونز  */
+
+.navone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    gap: 50px;
+}
+
+.navone{
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+body .navone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.navone ul,
+.navone li{
+    all: unset;
+}
+
+
+.navone img{
+    width: 50px;
+    opacity: .2;
+}
+
+
+.navone a{
+    position: relative;
+}
+
+                    /* كود السهم الي تحت الايكون  */
+
+.navone a::after {
+
+                        /* بعمل مكان السهم  */
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+
+  width: 0;
+  height: 0;
+                          /* بعمل السهم  */
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--borderIcon);
+
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+
+
+.navone img{
+    width: 50px;
+    height: auto;
+    opacity: .2;
+}
+
+
+الايكونز خلصت كده 
+
+
+
+                        /* بظبط الي يظهر اما اختار حاجة من الايكونز و ربطها مع js  */
+
+.navone a.active::after{
+    opacity:1;
+}
+
+
+
+
+.navone a:hover::after {
+  opacity: 1;
+}
+
+
+
+section {
+  position: relative;  
+  opacity: 0;
+  width: 100%;
+  top: 300px;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+section.active {
+  opacity: 1;
+  pointer-events: auto;
+
+}
+
+
+
+
+
+                                    /* الي بيتحط فيه اسامينا  */
+
+.home{
+    background-color: var(--sectionColor);
+    margin: 30px auto 0 auto;
+    width: 800px;
+    height: 60vh;
+    display: flex;
+}
+
+
+.person-changer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+                                                        /* السهم  */
+
+.next{
+    position: absolute;
+    right:-20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: var(--arrowButtonBackground);
+    color: var(--arrowColor);
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    opacity: .7;
+    transition: .3s;
+}
+
+
+.next:hover{
+    transform: translateY(-50%) scale(1.2);
+    opacity: 1;
+}
+
+                                                    /* نظام التنقل  */
+
+.person-changer{
+    position: relative;
+}
+
+
+.activate-changer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: .4s;
+    top: 0;
+    left: 0;
+}
+
+
+.activate-changer.active{
+    opacity: 1 ;
+}
+
+
+.person{
+    height: 100%;
+    width: 50%;
+    padding-left: 40px;
+}
+.person h1 {
+  margin-top: 60%;
+}
+
+.photo{
+    width: 50%;
+    height: 100%;
+}
+
+.photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+                                                    /* صفحة الكونتاكت اس  */
+
+
+.contact-us{
+    background-color: var(--sectionColor);
+    margin: -450px auto 0 auto;
+    width: 700px;
+    height: 60vh;
+    display: flex;
+    text-align: center ;
+}
+
+
+.talk{
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-bottom: 70px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+
+.input-label{
+    display: flex;
+    gap: 20PX;
+    width: 100%;
+    margin-bottom:20px ;
+}
+
+
+.input-label input {
+  flex: 1;
+  height: 45px;
+  padding: 10px;
+  border: 0;
+  font-family: sans-serif;
+  font-size:20px ;
+}
+
+
+form {
+  background-color: var(--formColor);
+  width: 100%;
+  padding: 40px;
+}
+
+textarea{
+  width: 630px;
+  width: 174;
+  border: 0;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+textarea::placeholder{
+    padding: 10px;
+}
+
+
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+
+
+.sumbit {
+  background-color: var(--sumbitBackground);
+  color: var(--sumbitTextcolor);
+  border: none;
+
+  padding: 15px 30px;
+  font-size: 16px;
+
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+
+.sumbit:hover {
+  background-color: var(--sumbitBackgroundHover);
+}

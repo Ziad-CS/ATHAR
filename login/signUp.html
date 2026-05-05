@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <title>Athar</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-section">
+            <img src="logo.jpg" alt="Logo" class="logo">
+            <h1>Athar</h1>
+        </div>
+        <div class="logout">
+            <a href="../index.html"><img src="logout.jpg"></a>
+        </div>
+    </nav>
+    <section class="container">
+        <!-- Left Section -->
+        <div class="image-side">
+            <div class="image-container">
+                <img src="login Image.jpg" alt="Side image">
+            </div>
+            <div class="left-content">
+                <h2>Create your account</h2>
+                <p>Join us and start your journey today.</p>
+            </div>
+        </div>
+            <form class="form-side" action="" id="form">
+                <h3 class="title">Sign up</h3>
+                <p>Already have account?<a href="login.html">Login</a></p>
+                <br>
+                <section class="input-side">
+                    <div class="name-input">
+                        <div class="input-field">
+                            <label for="firstname" class="inputLabels">First name</label>
+                            <input  type="text" placeholder="Enter your first name" name="firstname" id="firstname" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="lastname" class="inputLabels">Last name</label>
+                            <input type="text" placeholder="Enter your last name" name="lastname" id="lastname" required>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <label for="email-input" class="inputLabels">Email address</label>
+                        <i class="fa fa-envelope"></i>
+                        <input type="email" placeholder="Enter your email" name="email" id="email-input" required >
+                    </div>
+                   <div class="password-section">
+                     <div class="input-field">
+                        <label for="password-input" class="inputLabels">Password</label>
+                        <i class="fa fa-lock"></i>
+                        <input type="password" placeholder="Enter your password" name="password" id="password-input" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="confirm-input" class="inputLabels">Confirm Password</label>
+                        <i class="fa fa-lock"></i>
+                        <input type="password" placeholder="Confirm Password" name="confirmpassword" id="confirm-input" required>
+                    </div>
+                   </div>
+                    <ul class="requirements">
+                        <li class="invalid" id="length">At least 8 characters</li>
+                        <li class="invalid" id="number">Includes a number</li>
+                        <li class="invalid" id="uppercase">Includes an upper case</li>
+                        <li class="invalid" id="symbol">Includes a symbol</li>
+                        <li class="invalid" id="passwordmatched">Password matched</li>
+                    </ul>
+                    <button type="submit" class="btn">Create account</button>
+                </section>
+            </form>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egyptian Museum-Ticket Booking</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="style.css" id="cssTickets">
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<script src="main.js"></script>
+<body>
+    <header>
+        <nav class="pc">
+        <div class="img-logo"> <img src="../img/athar.png" alt="logo" class="img-70"> </div>
+        <div class="img-home"> <a href="../index.html"> <img src="../img/homeicone1.png" alt="home" class="img-30" id="homeIcone"> </a> </div>
+
+        <ul>
+            <li class="nav-item"> <a href="../introduction/index.html"> Introduction </a> </li>
+            <li class="nav-item"> <a href="../civilizations/Civilizations.html"> Civilizations </a> </li>
+            <li class="nav-item"> <a href="../gallery/gallery.html"> Gallery </a> </li>
+            <li class="nav-item"> <a href="../places/page.html"> Places </a> </li>
+            <li class="nav-item"> <a href="../tickets/tickets.html"> Tickets </a> </li>
+            <li class="nav-item"> <a href="../contactUs/contactUs.html"> Contact Us </a> </li>
+        </ul>
+        <a href="../login/login.html" class="single" > register </a>
+    </nav>
+
+    <nav class="mobile">
+        <ul>
+            <li class="nav-item"> <a href="../index.html"> <img src="../img/homeicone1.png" alt="home" class="img-30"> </a> </li>
+            <li class="nav-item"> <a href="../introduction/index.html"> <img src="../img/intro.png" alt="home" class="img-30"> </a> </li>
+            <li class="nav-item"> 
+                <button class="mid-menu" popovertarget="my-menu"> <img src="../img/popup-menu.png" alt="menu" class="img-30 mid-button"> </button> 
+                <div id="my-menu" popover class="menu">
+                    <a href="../civilizations/Civilizations.html"> Civilizations </a>
+                    <a href="../gallery/gallery.html"> Gallery </a>
+                    <a href="../places/page.html"> Places </a>
+                    <a href="../tickets/tickets.html"> Tickets </a>
+                </div>
+            </li>
+            <li class="nav-item"> <a href="../contactUs/contactUs.html"> <img src="../img/contact.png" alt="home" class="img-30"> </a> </li>
+            <li class="nav-item"> <a href="../login/login.html"> <img src="../img/login.png" alt="login" class="img-30"> </a> </li>
+        </ul>
+    </nav>
+    <br><br>
+         <h1>Egyptian Museum</h1>
+         <p>CAIRO-EST. 1902</p>
+    </header>
+    <hr>
+    <main>
+        <div class="stepper">
+            <div class="step active">1</div>
+            <div class="line"></div>
+            <div class="step">2</div>
+            <div class="line"></div>
+            <div class="step">3</div>
+            <div class="line"></div>
+            <div class="step">4</div>
+            <div class="line"></div>
+            <div class="step">5</div>
+            <div class="line"></div>
+            <div class="step">6</div>
+            <div class="line"></div>
+            <div class="step">7</div>
+            <div class="line"></div>
+        </div>
+        <form action="#">
+            <section class="step-section active">
+            <h2 class="step-title">Step 1 - Choose Ticket Type</h2>
+            <div class="tickets">
+                <div class="card">
+                    <div class="cut left"></div>
+                    <div class="cut right"></div>
+                    <img src="adult.jpg" alt="">
+                    <h3>Adult</h3>
+                    <p>21+</p>
+                    <span>200 EGP</span>
+                    <div class="counter">
+                        <button type="button">-</button>
+                        <span>0</span>
+                        <button type="button">+</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="cut left"></div>
+                    <div class="cut right"></div>
+                    <img src="foreign.jpg" alt="">
+                    <h3>Foreign</h3>
+                    <p>Full access</p>
+                    <span>1500 EGP</span>
+                    <div class="counter">
+                        <button type="button">-</button>
+                        <span>0</span>
+                        <button type="button">+</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="cut left"></div>
+                    <div class="cut right"></div>
+                    <img src="student.jpg" alt="">
+                    <h3>Student</h3>
+                    <p>Valid ID</p>
+                    <span>100 EGP</span>
+                    <div class="counter">
+                        <button type="button">-</button>
+                        <span>0</span>
+                        <button type="button">+</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="cut left"></div>
+                    <div class="cut right"></div>
+                    <img src="child.jpg" alt="">
+                    <h3>Child</h3>
+                    <p>6-17</p>
+                    <span>50 EGP</span>
+                    <div class="counter">
+                        <button type="button">-</button>
+                        <span>0</span>
+                        <button type="button">+</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="card gold">
+                <h3>Royal Passage</h3>
+                <p>600 EGP</p>
+                <div class="counter">
+                    <button type="button">-</button>
+                    <span>0</span>
+                    <button type="button">+</button>
+                </div>
+            </div>
+            <br>
+            <div class="card vip">
+                <h3>VIP Experience</h3>
+                <p>1200 EGP</p>
+                <div class="counter">
+                    <button type="button">-</button>
+                    <span>0</span>
+                    <button type="button">+</button>
+                </div>
+            </div>
+            <br>
+            <button type="button" onclick="nextStep()">Next</button>
+        </section>
+        <section class="step-section">
+            <div class="step-box">
+                <h2 class="step-title">Step 2 - Date & Time</h2>
+                <div class="form-group">
+                    <label for="date">Visit Date</label>
+                    <input type="date" name="date" id="date" placeholder="mm/dd/yyyy" required>
+                </div>
+            <br>
+            <br>
+            <div class="form-group">
+                <label for="nationality">Nationality</label>
+                <select name="nationality" id="nationality">
+                <option value="">Select</option>
+                <option value="egyptian">Egyptian</option>
+                <option value="foreign">Foreign</option>
+                </select>
+            </div>
+            <br>
+            <br>
+
+            <div class="form-group">
+                <label for="">Preferred Time</label>
+                <br>
+                <div class="time-grid">
+                    <label class="time-item"><input type="radio" name="time" value="9:00" required>
+                        <span>9:00 AM</span>
+                         </label
+                         ><br><br>
+                    <label class="time-item" >
+                        <input type="radio" name="time" value="10:00" required> 
+                        <span>10:00 AM</span>
+                    </label> 
+                    <br><br>
+                    <label class="time-item">
+                        <input type="radio" name="time" value="11:00" required>
+                         <span>11:00 AM</span>
+                        </label>
+                        <br><br>
+                    <label class="time-item">
+                        <input type="radio" name="time" value="12:00" required> 
+                        <span>12:00 AM</span>
+                    </label>
+                    <br><br>
+                    <label class="time-item">
+                        <input type="radio" name="time" value="1:00" required>
+                         <span>1:00 PM</span>
+                    </label>
+                    <br><br>
+                    <br><br>
+                <div>
+            </div>
+        </div>
+        
+            <br><br>
+            <button type="button" onclick="nextStep()">Next</button>
+            <br><br>
+            <button type="button" onclick="prevStep()">Back</button>
+        </section>
+
+        <section class="step-section">
+            <div class="step-container">
+                <h2 class="step-title">Step 3 - Tour Guide</h2>
+            <br>
+            <div class="options-list">
+                <label class="option-item">
+                    <input type="radio" name="guide" value="none" checked>
+                    <span>No Guide <span class="price">-Free</span></span>
+                    <br><br>
+                </label>
+
+                <label class="option-item">
+                    <input type="radio" name="guide" value="audio" checked>
+                    <span>Audio Guide <span class="price">-80 EGP</span></span>
+                    <br><br>
+                </label>
+
+                <label class="option-item">
+                    <input type="radio" name="guide" value="Private" checked>
+                    <span>Private Guide <span class="price">-600 Egp</span></span>
+                    <br><br>
+                </label>
+            </div>
+            </div>
+            <br>
+            <button type="button" onclick="nextStep()">Next</button>
+            <br><br>
+            <button type="button" onclick="prevStep()">Back</button>
+        </section>
+
+        <section class="step-section">
+            <div class="step-container">
+                <h2 class="step-title">Step 4 - Extra Rooms</h2>
+            <br>
+            <div class="options-list">
+                <label class="option-item">
+                    <input type="checkbox" name="rooms" value="200">
+                    <span>VR Experience <span class="price">-200 EGP</span></span> <br><br>
+                </label>
+
+                <label class="option-item">
+                    <input type="checkbox" name="rooms" value="150">
+                    <span>Tutankhamun Hall<span class="price">-150 EGP</span></span> <br><br>
+                </label>
+
+                <label class="option-item">
+                    <input type="checkbox" name="rooms" value="100">
+                    <span>Royal Mummies<span class="price">-100 EGP</span></span> <br><br>
+                </label>
+            </div>
+            </div>
+            <br>
+            <button type="button" onclick="nextStep()">Next</button>
+            <br><br>
+            <button type="button" onclick="prevStep()">Back</button>
+        </section>
+
+        <section class="step-section">
+            <div class="step-container">
+                <h2 class="step-title">Step 5 - Your Info</h2>
+                <div class="input-group">
+                    <label for="user-name">Name:</label>
+                    <input type="text" name="name" id="user-name" placeholder="Enter your full name" required>
+                    <br><br>
+                </div>
+
+                <div class="input-group">
+                    <label for="user-email">Email:</label>
+                    <input type="email" name="email" id="user-email" placeholder="examble@mail.com" required>
+                    <br><br>
+                </div>
+
+                <div class="input-group">
+                    <label for="user-phone">Phone:</label>
+                    <input type="tel" name="phone" id="user-phone" placeholder="01xxxxxxxx" required>
+                    <br><br>
+                </div>
+            </div>
+            <br>
+            <button type="button" onclick="nextStep()">Next</button>
+            <br><br>
+            <button type="button" onclick="prevStep()">Back</button>
+        </section>
+
+        <section class="step-section">
+           <div class="step-container">
+             <h2 class="step-title">Step 6 - Payment</h2>
+            <br>
+            <div class="options-list">
+                <label class="option-item">
+                    <input type="radio" name="payment" value="cash" required>
+                    <span>Cash</span>
+                    <br><br>
+                </label>
+
+                <label class="option-item">
+                    <input type="radio" name="payment" value="card" required>
+                    <span>Card</span>
+                    <br><br>
+                </label>
+            </div>
+           </div>
+           <br>
+           <button type="button" onclick="nextStep()">Next</button>
+           <br><br>
+           <button type="button" onclick="prevStep()">Back</button>
+        </section>
+
+          <section class="step-section">
+            <div class="step-confirm" >
+                <h2 class="step-title">Step 7 - Confirm</h2>
+               <p class="confirm-text">Total price will be calculated after <strong>submit</strong></p>
+               <button type="submit" class="confirm-btn">Confirm Booking</button>
+            </div>
+            <br>
+            <button type="button" onclick="prevStep()">Back</button>
+        </section>
+        </form>
+        
+    </main>
+    
+</body>
+</html>
