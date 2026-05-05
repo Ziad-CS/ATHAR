@@ -32,13 +32,14 @@ cards.forEach(function(ele) {
 });
 // !cards and themes
 // !me
-function homeThemes(welcolor, welto, welshadow, helocolor, backcolorfs, backcolorts) {
+function homeThemes(welcolor, welto, welshadow, helocolor, backcolorfs, backcolorts, fer3on) {
   document.documentElement.style.setProperty('--welcomeColor', welcolor);
   document.documentElement.style.setProperty('--welcomeTo', welto);
   document.documentElement.style.setProperty('--welcomeShadow', welshadow);
   document.documentElement.style.setProperty('--heloColor', helocolor);
   document.documentElement.style.setProperty('--backgroundFirstS', backcolorfs);
   document.documentElement.style.setProperty('--backgroundthirdS', backcolorts);
+  document.documentElement.style.setProperty('--fer3onColor', fer3on);
 }
 function places (c_H_H_B_h,c_B,c_Bh,c_P_w,c_B_S_b,c_B_S_s,c_Bs,p_Bg)
 {
@@ -101,6 +102,7 @@ let themes = {
     heloColor: "",
     backgroundFirstS: "",
     backgroundthirdS: "",
+    fer3on: "",
     style: ""
   },
   civilizations:{
@@ -158,7 +160,9 @@ let themes = {
     homeIconePages: "",
   }
 }
-// window.localStorage.setItem("themes" , JSON.stringify(themes));
+if (window.localStorage.getItem("themes") === null ) {
+  window.localStorage.setItem("themes" , JSON.stringify(themes));
+}
 let local = JSON.parse(window.localStorage.getItem("themes"));
 
 // ! all themes and syles for all web valus set
@@ -170,6 +174,7 @@ function theme1() {
   local.home.heloColor = "#b689001c";
   local.home.backgroundFirstS = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) , url(../img/home1.png)";
   local.home.backgroundthirdS = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) , url(../img/testTheme/sectionInEnd.png)";
+  local.home.fer3on = "#b6890025";
   // ! tickets
   local.tickets.mainBg = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) ,url(\"back3.jpg\")";
   local.tickets.bg = "#fac26f";
@@ -206,7 +211,6 @@ function theme1() {
   local.places.color_Background_Sec_smoll = "rgba(255, 255, 255, 0.07)";
   local.places.color_Boxshadow = "rgba(245,197,66,0.4)";
   local.places.photo_background = "url(background.png)";
-  
 };
 function theme2(){
   // ! me
@@ -216,6 +220,7 @@ function theme2(){
   local.home.heloColor = "#b689001c";
   local.home.backgroundFirstS = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) , url(../img/home_backgrounds/sand.jpeg)";
   local.home.backgroundthirdS = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) , url(../img/testTheme/sectionInEnd.png)";
+  local.home.fer3on = "#b6890025";
   // ! tickets
   local.tickets.mainBg = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) ,url(\"back3.jpg\")";
   local.tickets.bg = "#fac26f";
@@ -262,6 +267,7 @@ function theme3(){
   local.home.heloColor = "#b689001c";
   local.home.backgroundFirstS = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) , url(../img/night-nile.jpg)";
   local.home.backgroundthirdS = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) , url(../img/testTheme/sectionInEnd.png)";
+  local.home.fer3on = "#b6890025";
   // ! tickets
   local.tickets.mainBg = "linear-gradient(rgba(10,15,28,0.4), rgba(10,15,28,0.4)) ,url(\"dark-test.jpg\")";
   local.tickets.bg = "#020617";
@@ -308,6 +314,7 @@ function theme4() {
   local.home.heloColor = "#b689001c";
   local.home.backgroundFirstS = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) , url(../img/home_backgrounds/Papyrus_Scrolls.jpeg)";
   local.home.backgroundthirdS = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) , url(../img/sectionInEnd/mob-background.png)";
+  local.home.fer3on = "#b6890025";
   // ! tickets
   local.tickets.mainBg = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) ,url(\"back3.jpg\")";
   local.tickets.bg = "#fac26f";
@@ -353,6 +360,7 @@ function theme5(){
   local.home.heloColor = "#b689001c";
   local.home.backgroundFirstS = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) , url(../img/testTheme/home.png)";
   local.home.backgroundthirdS = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) , url(../img/testTheme/sectionInEnd.png)";
+  local.home.fer3on = "#b6890025";
   // ! tickets
   local.tickets.mainBg = "linear-gradient(to bottom, rgb(0, 0, 0, 0.7) 5%, rgb(0, 0, 0, 0.7) 95%) ,url(\"back3.jpg\")";
   local.tickets.bg = "#020617";
@@ -399,6 +407,7 @@ function theme6(){
   local.home.heloColor = "#b689001c";
   local.home.backgroundFirstS = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) , url(../img/testTheme/home.png)";
   local.home.backgroundthirdS = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) , url(../img/sectionInEnd/mob-background.png)";
+  local.home.fer3on = "#b6890025";
   // ! tickets
   local.tickets.mainBg = "linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 5%, rgb(0, 0, 0, 0.05) 95%) ,url(\"back3.jpg\")";
   local.tickets.bg = "#fac26f";
@@ -444,6 +453,7 @@ function mainTheme1(){
   local.main.navTextColor = "black";
   local.main.navShadowColor = "rgba(0, 0, 0, 0.3)";
   local.main.homeIcone = "img/homeicone1.png";
+  local.main.homeIconePages = "../img/homeicone1.png";
 };
 function mainTheme2(){
   // ! me
@@ -452,6 +462,7 @@ function mainTheme2(){
   local.main.navTextColor = "white";
   local.main.navShadowColor = "rgb(255 255 255 / 28%)";
   local.main.homeIcone = "img/homeicone2.png";
+  local.main.homeIconePages = "../img/homeicone2.png";
 };
 
 function style1(){
@@ -496,7 +507,8 @@ function generate () {
     local.home.welcomeShadow,
     local.home.heloColor,
     local.home.backgroundFirstS,
-    local.home.backgroundthirdS
+    local.home.backgroundthirdS,
+    local.home.fer3on
   );
   ticketsThemes (
     local.tickets.mainBg,
