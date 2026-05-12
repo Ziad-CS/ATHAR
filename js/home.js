@@ -576,9 +576,9 @@ function generate () {
   // !
   window.localStorage.setItem("themes" , JSON.stringify(local));
 }
-if (window.localStorage.getItem("themes") === null ) {
+// if (window.localStorage.getItem("themes") === null ) {
   generate ();
-}
+// }
 
 cards[0].addEventListener("click", style1);
 cards[0].addEventListener("click", theme1);
@@ -634,3 +634,7 @@ cards[11].addEventListener("click", theme6);
 cards[11].addEventListener("click", mainTheme2);
 cards[11].addEventListener("click", generate);
 
+if (local.home.welcomeColor === "")
+{
+  cards[0].click();
+}
